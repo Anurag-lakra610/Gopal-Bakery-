@@ -57,7 +57,7 @@ export const Header: React.FC<HeaderProps> = ({
               <button
                 key={link}
                 onClick={() => onNavigate(link.toLowerCase())}
-                className={`text-[14px] font-black uppercase tracking-widest transition-colors duration-300 ${
+                className={`text-[14px] font-heading font-black uppercase tracking-widest transition-colors duration-300 ${
                   isScrolled ? 'text-bakery-chocolate hover:text-bakery-terracotta' : 'text-white hover:text-pink-300'
                 }`}
               >
