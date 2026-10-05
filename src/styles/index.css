@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('//bernicebakery.com/cdn/shop/t/4/assets/ApfelGrotezk-Regular.woff2') format('woff2');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('//bernicebakery.com/cdn/shop/t/4/assets/ApfelGrotezk-Mittel.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('//bernicebakery.com/cdn/shop/t/4/assets/ApfelGrotezk-Fett.woff2') format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'Apfel Grotezk';
+  src: url('//bernicebakery.com/cdn/shop/t/4/assets/ApfelGrotezk-Satt.woff2') format('woff2');
+  font-weight: 800;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'balto', sans-serif;
+    color: #2B1E1A;
+    background-color: #FAF6F0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Apfel Grotezk', sans-serif;
+    font-weight: 800;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF6F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C85A32;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A64522;
+}
+
+/* Glassmorphism Header */
+.glass-header {
+  background: rgba(250, 246, 240, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(43, 30, 26, 0.08);
+}
+
+/* Texture Pattern overlay */
+.bg-grain {
+  background-image: radial-gradient(rgba(43, 30, 26, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Hide scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
