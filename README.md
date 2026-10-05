@@ -1,38 +1,55 @@
-# Ektamission - Food Distribution & Hunger Relief Initiative
+# Gopal Bakery
 
-Official website for **Ektamission**, a non-profit organization providing free, nutritious meals to patients' families across 60+ hospitals and feeding over 5,000+ people daily in Punjab, India.
+**Handcrafted Cookies, Oven-Fresh Pastries & Pure Joy Est. 1998**
 
-## 🚀 Live Demo & Deployment
+Welcome to the official repository for **Gopal Bakery**, a modern React web application built with Vite, TypeScript, and Tailwind CSS.
 
-This project is built as a static, mobile-responsive web application ready for instant deployment on **GitHub Pages**, **Vercel**, or **Netlify**.
+## 🚀 Features
 
-### Deploy on GitHub Pages:
-1. Go to your repository settings on GitHub (`https://github.com/Anurag-lakra610/Ekta-Mission/settings/pages`).
-2. Under **Build and deployment**, select `Deploy from a branch`.
-3. Choose `main` branch and `/ (root)` folder, then click **Save**.
+- **Modern UI:** Built with React, Tailwind CSS, and Framer Motion for smooth animations.
+- **Product Catalog:** Interactive showcase of cakes, cookies, and breads with categorization.
+- **Shopping Cart:** Slide-out cart drawer with context-based state management.
+- **Mobile Responsive:** Fully responsive design that looks great on mobile, tablet, and desktop.
+- **Type-safe:** Built completely in TypeScript.
 
----
+## 🛠️ Tech Stack
 
-## 📁 Project Structure
+- **[React 18](https://react.dev/)**
+- **[Vite](https://vitejs.dev/)**
+- **[TypeScript](https://www.typescriptlang.org/)**
+- **[Tailwind CSS](https://tailwindcss.com/)**
+- **[Framer Motion](https://www.framer.com/motion/)** (Animations)
+- **[Lucide React](https://lucide.dev/)** (Icons)
 
-```
-Ekta-Mission/
-├── index.html                  # Main website landing page
-├── README.md                   # Documentation & deployment guide
-└── images/                     # Web assets & images
-    ├── logo.jpg                # Ektamission logo
-    ├── qr.jpeg                 # Donation UPI QR code
-    ├── hero-bg.jpeg            # Hero background image
-    ├── hospital-langar.jpeg    # Hospital Langar service photo
-    ├── community-drive.jpg     # Community food drive photo
-    └── community-outreach.jpeg # Volunteer outreach photo
-```
+## 💻 Running Locally
 
----
+To run this project on your local machine, follow these steps:
 
-## 📞 Contact & Support
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Anurag-lakra610/Gopal-Bakery-.git
+   cd Gopal-Bakery
+   ```
 
-- **Phone:** +91 9257060001
-- **Email:** Gilljaswinder077@gmail.com
-- **Instagram:** [@ektamission_](https://www.instagram.com/ektamission_/)
-- **UPI ID:** `ektawelfaretrust5531@sbi`
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   *The app will usually run at `http://localhost:5173/`*
+
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
+   *This will generate optimized static files in the `dist` folder.*
+
+## 📞 Contact
+
+- **Phone/WhatsApp:** +91 98765 43210
+- **Email:** hello@gopalbakery.com
+- **Instagram:** [@gopalbakery](https://instagram.com/gopalbakery)
