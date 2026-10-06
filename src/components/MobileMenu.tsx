@@ -39,10 +39,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, onNavig
           {/* Header row */}
           <div className="flex items-center justify-between border-b border-bakery-chocolate/10 pb-4">
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🥐</span>
-              <span className="font-serif font-black text-xl tracking-tight text-bakery-chocolate">
-                GOPAL BAKERY
-              </span>
+              <img src="/logo.png" alt="The Gopal's" className="h-10 w-auto object-contain" />
             </div>
             <button
               onClick={onClose}

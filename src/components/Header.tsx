@@ -34,7 +34,7 @@ export const Header: React.FC<HeaderProps> = ({
       }`}
     >
       {/* 100px padding left/right to match reference */}
-      <div className="w-full px-[24px] sm:px-[50px] lg:px-[100px] flex items-center justify-between">
+      <div className="w-full px-[16px] sm:px-[40px] lg:px-[100px] flex items-center justify-between">
         
         {/* Left Brand Logo - Replacing text with new image logo */}
         <button
@@ -53,12 +53,12 @@ export const Header: React.FC<HeaderProps> = ({
           
           {/* Navigation Menu Links */}
           <div className="hidden lg:flex items-center gap-8">
-            {['COOKIES', 'CAKES', 'ABOUT', 'WHOLESALE', 'CONTACT'].map((link) => (
+            {['COOKIES', 'CAKES', 'ABOUT', 'CONTACT'].map((link) => (
               <button
                 key={link}
                 onClick={() => onNavigate(link.toLowerCase())}
                 className={`text-[14px] font-heading font-black uppercase tracking-widest transition-colors duration-300 ${
-                  isScrolled ? 'text-bakery-chocolate hover:text-bakery-terracotta' : 'text-white hover:text-pink-300'
+                  isScrolled ? 'text-black hover:text-primary' : 'text-white hover:text-accent'
                 }`}
               >
                 {link}
@@ -72,12 +72,12 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={openCart}
               aria-label="Open cart drawer"
               className={`relative flex items-center transition-colors duration-300 ${
-                isScrolled ? 'text-bakery-chocolate hover:text-bakery-terracotta' : 'text-white hover:text-pink-300'
+                isScrolled ? 'text-black hover:text-primary' : 'text-white hover:text-accent'
               }`}
             >
               <ShoppingBag className="w-5 h-5" strokeWidth={2.5} />
               {totalItemsCount > 0 && (
-                <span className="absolute -top-2 -right-2 bg-[#FA88CB] text-black text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute -top-2 -right-2 bg-accent text-black text-[10px] font-black w-4 h-4 rounded-full flex items-center justify-center">
                   {totalItemsCount}
                 </span>
               )}
@@ -87,7 +87,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={onOpenSearch}
               aria-label="Search bakery products"
               className={`transition-colors duration-300 ${
-                isScrolled ? 'text-bakery-chocolate hover:text-bakery-terracotta' : 'text-white hover:text-pink-300'
+                isScrolled ? 'text-black hover:text-primary' : 'text-white hover:text-accent'
               }`}
             >
               <Search className="w-5 h-5" strokeWidth={2.5} />
@@ -98,7 +98,7 @@ export const Header: React.FC<HeaderProps> = ({
               onClick={onOpenMobileMenu}
               aria-label="Open Mobile Navigation Menu"
               className={`lg:hidden p-1 transition-colors ${
-                isScrolled ? 'text-bakery-chocolate' : 'text-white'
+                isScrolled ? 'text-black' : 'text-white'
               }`}
             >
               <Menu className="w-6 h-6" />

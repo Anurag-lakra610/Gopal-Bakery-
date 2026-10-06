@@ -7,18 +7,30 @@ export default {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: '#E3000F', // Logo Red
+          dark: '#B3000C',
+        },
+        secondary: {
+          DEFAULT: '#FFFFFF', // Logo White
+          dark: '#F2F2F2',
+        },
+        accent: {
+          DEFAULT: '#FFD700', // Logo Golden
+          dark: '#D4AF37',
+        },
         bakery: {
-          cream: '#FAF6F0',
-          'cream-dark': '#F2ECE1',
-          chocolate: '#2B1E1A',
-          'chocolate-light': '#4A3B35',
-          terracotta: '#C85A32',
-          'terracotta-dark': '#A64522',
-          pastry: '#F4E7CE',
-          gold: '#D4AF37',
+          cream: '#FFFFFF', 
+          'cream-dark': '#F2F2F2',
+          chocolate: '#1A1A1A', 
+          'chocolate-light': '#333333', 
+          terracotta: '#E3000F', 
+          'terracotta-dark': '#B3000C', 
+          pastry: '#FFF9D6', 
+          gold: '#FFD700', 
           mint: '#4A7C59',
           rose: '#E8A598',
-          accent: '#E67E22',
+          accent: '#FFD700', 
         }
       },
       fontFamily: {

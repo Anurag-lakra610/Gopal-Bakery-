@@ -6,7 +6,6 @@ import { Plus, Minus } from 'lucide-react';
 
 /* ─────────────────────────────────────────────────────────────
    INGREDIENT TAGS — shown on card hover (per product)
-   Positions in % from top-left of image container
 ───────────────────────────────────────────────────────────── */
 const INGREDIENT_TAGS: Record<
   string,
@@ -46,12 +45,6 @@ const INGREDIENT_TAGS: Record<
 
 /* ─────────────────────────────────────────────────────────────
    HAND-DRAWN CHOCOLATE LAYER CAKE SLICE SVG
-   Exact trace of the Bernice reference illustration:
-   • 3 dark chocolate layers
-   • 2 white cream separator lines  
-   • White frosting top with vertical hatch marks
-   • 4 dark chocolate ganache peaks top-right
-   • Red strawberry with leaves top-left
 ───────────────────────────────────────────────────────────── */
 const CakeSliceSVG = () => (
   <svg
@@ -62,7 +55,6 @@ const CakeSliceSVG = () => (
     height={88}
     aria-label="Chocolate layer cake slice illustration"
   >
-    {/* ── 1. OUTER DARK BODY (full wedge silhouette) ── */}
     <path
       d="M18 352 C95 364 310 364 508 364 L508 46
          Q288 30 84 64 Q42 76 18 172 Z"
@@ -72,8 +64,6 @@ const CakeSliceSVG = () => (
       strokeLinejoin="round"
       strokeLinecap="round"
     />
-
-    {/* ── 2. WHITE FROSTING TOP (upper ~30% of slice) ── */}
     <path
       d="M84 64 Q288 30 508 46 L508 148
          Q288 134 86 160 Q46 170 20 212
@@ -83,8 +73,6 @@ const CakeSliceSVG = () => (
       strokeWidth="8"
       strokeLinejoin="round"
     />
-
-    {/* ── 3. VERTICAL HATCH MARKS on white frosting ── */}
     {[0,1,2,3,4,5,6,7].map((i) => {
       const x1 = 110 + i * 30;
       const y1 = 56 + i * 2;
@@ -101,75 +89,37 @@ const CakeSliceSVG = () => (
         />
       );
     })}
-
-    {/* ── 4. DARK CHOCOLATE GANACHE PEAKS (top-right) ── */}
-    {/* Each peak is a bell-curve arc pointing up */}
-    <path
-      d="M296 66 C305 20 322 16 334 62"
-      fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round"
-    />
-    <path
-      d="M334 60 C344 12 362 8 374 58"
-      fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round"
-    />
-    <path
-      d="M374 56 C384 8 403 5 414 54"
-      fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round"
-    />
-    <path
-      d="M414 52 C424 7 442 5 454 50"
-      fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round"
-    />
-    {/* Fill gap between last peak and right edge */}
+    <path d="M296 66 C305 20 322 16 334 62" fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round" />
+    <path d="M334 60 C344 12 362 8 374 58" fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round" />
+    <path d="M374 56 C384 8 403 5 414 54" fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round" />
+    <path d="M414 52 C424 7 442 5 454 50" fill="#111111" stroke="#000" strokeWidth="6" strokeLinejoin="round" />
     <path d="M454 50 L508 46 L508 110 L454 108 Z" fill="#111111" />
-
-    {/* ── 5. CREAM SEPARATOR LINE 1 (layer 1 ↔ 2) ── */}
-    <path d="M18 218 Q262 204 508 218"
-      stroke="#FFFFFF" strokeWidth="18" strokeLinecap="round" />
-    <path d="M18 218 Q262 204 508 218"
-      stroke="#000000" strokeWidth="3" strokeLinecap="round" />
-
-    {/* ── 6. CREAM SEPARATOR LINE 2 (layer 2 ↔ 3) ── */}
-    <path d="M17 288 Q262 274 508 288"
-      stroke="#FFFFFF" strokeWidth="18" strokeLinecap="round" />
-    <path d="M17 288 Q262 274 508 288"
-      stroke="#000000" strokeWidth="3" strokeLinecap="round" />
-
-    {/* ── 7. STRAWBERRY BODY (red teardrop on top-left) ── */}
+    <path d="M18 218 Q262 204 508 218" stroke="#FFFFFF" strokeWidth="18" strokeLinecap="round" />
+    <path d="M18 218 Q262 204 508 218" stroke="#000000" strokeWidth="3" strokeLinecap="round" />
+    <path d="M17 288 Q262 274 508 288" stroke="#FFFFFF" strokeWidth="18" strokeLinecap="round" />
+    <path d="M17 288 Q262 274 508 288" stroke="#000000" strokeWidth="3" strokeLinecap="round" />
     <path
       d="M72 126 C50 102 46 72 63 60
          C72 52 84 55 88 68
          C92 55 104 51 114 59
          C132 72 126 104 103 128
          Q88 142 72 126 Z"
-      fill="#E8142A"
-      stroke="#000000"
-      strokeWidth="6"
-      strokeLinejoin="round"
+      fill="#E8142A" stroke="#000000" strokeWidth="6" strokeLinejoin="round"
     />
-    {/* Strawberry seeds */}
     <ellipse cx="76"  cy="94"  rx="3" ry="2.2" fill="#8B0000" transform="rotate(-12 76 94)" />
     <ellipse cx="92"  cy="86"  rx="3" ry="2.2" fill="#8B0000" />
     <ellipse cx="104" cy="99"  rx="3" ry="2.2" fill="#8B0000" transform="rotate(11 104 99)" />
     <ellipse cx="80"  cy="113" rx="3" ry="2.2" fill="#8B0000" transform="rotate(-5 80 113)" />
     <ellipse cx="97"  cy="117" rx="3" ry="2.2" fill="#8B0000" />
-
-    {/* Strawberry leaves (3 pointed leaves) */}
-    <path d="M80 60 C68 33 53 30 49 42 L63 55 Z"
-      fill="#1c7a1c" stroke="#000" strokeWidth="4.5" strokeLinejoin="round" />
-    <path d="M88 57 C83 32 95 23 98 37 L91 52 Z"
-      fill="#1c7a1c" stroke="#000" strokeWidth="4.5" strokeLinejoin="round" />
-    <path d="M96 59 C107 33 121 33 116 47 L103 56 Z"
-      fill="#1c7a1c" stroke="#000" strokeWidth="4.5" strokeLinejoin="round" />
-    {/* Central stem */}
+    <path d="M80 60 C68 33 53 30 49 42 L63 55 Z" fill="#1c7a1c" stroke="#000" strokeWidth="4.5" strokeLinejoin="round" />
+    <path d="M88 57 C83 32 95 23 98 37 L91 52 Z" fill="#1c7a1c" stroke="#000" strokeWidth="4.5" strokeLinejoin="round" />
+    <path d="M96 59 C107 33 121 33 116 47 L103 56 Z" fill="#1c7a1c" stroke="#000" strokeWidth="4.5" strokeLinejoin="round" />
     <path d="M88 57 L85 42" stroke="#000" strokeWidth="4" strokeLinecap="round" />
   </svg>
 );
 
 /* ─────────────────────────────────────────────────────────────
    ALTERNATING MARQUEE ROW
-   even index → scroll left  (translateX 0 → -50%)
-   odd  index → scroll right (translateX -50% → 0)
 ───────────────────────────────────────────────────────────── */
 const MarqueeRow = ({ reverse }: { reverse: boolean }) => {
   const chunk = (
@@ -177,7 +127,7 @@ const MarqueeRow = ({ reverse }: { reverse: boolean }) => {
       {[...Array(8)].map((_, i) => (
         <span
           key={i}
-          className={i % 2 === 0 ? 'text-[#0F6270]' : 'bmc-stroke'}
+          className={i % 2 === 0 ? 'text-primary' : 'bmc-stroke'}
           style={{ marginRight: '3.5rem' }}
         >
           BESTSELLERS
@@ -190,9 +140,8 @@ const MarqueeRow = ({ reverse }: { reverse: boolean }) => {
     <div className="overflow-hidden w-full flex">
       <div
         className={`flex whitespace-nowrap font-heading font-black tracking-tighter leading-none select-none
-          text-[88px] sm:text-[108px] ${reverse ? 'bmc-right' : 'bmc-left'}`}
+          text-[60px] sm:text-[88px] lg:text-[108px] ${reverse ? 'bmc-right' : 'bmc-left'}`}
       >
-        {/* two identical copies — seamless infinite loop */}
         <span className="flex items-center">{chunk}</span>
         <span className="flex items-center" aria-hidden>{chunk}</span>
       </div>
@@ -201,7 +150,11 @@ const MarqueeRow = ({ reverse }: { reverse: boolean }) => {
 };
 
 /* ─────────────────────────────────────────────────────────────
-   PRODUCT CARD — with hover image-swap + ingredient tags
+   PRODUCT CARD — Bernice-style arch card
+   1. WHITE FILLED card body — hides watermark behind it
+   2. RED BORDER OUTLINE with 100px top radius (smooth arch)
+   3. Image pops out above the outline, radius matches card
+   4. Watermark scrolls BEHIND the white-filled cards
 ───────────────────────────────────────────────────────────── */
 interface ProductCardProps {
   product: Product;
@@ -227,16 +180,28 @@ const BestsellersCard: React.FC<ProductCardProps> = ({
       transition={{ duration: 0.6, delay: index * 0.13, ease: [0.16, 1, 0.3, 1] }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="flex flex-col bg-[#F4F2EC] border-2 border-[#0F6270] rounded-t-[180px] rounded-b-[44px] overflow-hidden"
+      className="relative flex flex-col p-[10px] pb-0"
       style={{ willChange: 'transform' }}
     >
-      {/* ── IMAGE ZONE (fills top of arch, clipped by overflow-hidden) ── */}
+      {/* ── WHITE FILLED CARD BODY — blocks watermark from showing through ── */}
       <div
-        className="relative mx-5 mt-8 cursor-pointer overflow-hidden rounded-t-[140px] rounded-b-[28px] bg-white shadow-inner flex-shrink-0"
-        style={{ aspectRatio: '1 / 1' }}
+        className="absolute inset-0 bg-white rounded-t-[999px] rounded-b-[40px]"
+      />
+
+      {/* ── RED BORDER OUTLINE — perfect tomb/arch shape (999px radius) ── */}
+      <div
+        className="absolute inset-0 border-[3px] border-primary rounded-t-[999px] rounded-b-[40px] pointer-events-none"
+      />
+
+      {/* ── IMAGE — pops out above the outline, radius matches card arch perfectly ── */}
+      <div
+        className="relative z-10 w-full cursor-pointer overflow-hidden bg-white shadow-sm flex-shrink-0"
+        style={{
+          aspectRatio: '1 / 1',
+          borderRadius: '999px 999px 12px 12px',
+        }}
         onClick={onQuickView}
       >
-        {/* Image with cross-fade swap on hover */}
         <motion.img
           src={product.image}
           alt={product.name}
@@ -254,86 +219,87 @@ const BestsellersCard: React.FC<ProductCardProps> = ({
           loading="lazy"
         />
 
-        {/* ── INGREDIENT TAGS — animate in on hover ── */}
+        {/* ── INGREDIENT TAGS ── */}
         <AnimatePresence>
-          {isHovered && tags.map((tag, i) => (
-            <motion.span
-              key={tag.label}
-              initial={{ opacity: 0, scale: 0.6, rotate: tag.rotate - 15 }}
-              animate={{ opacity: 1, scale: 1, rotate: tag.rotate }}
-              exit={{ opacity: 0, scale: 0.6 }}
-              transition={{
-                duration: 0.28,
-                delay: i * 0.07,
-                ease: [0.34, 1.56, 0.64, 1],   /* spring overshoot for playfulness */
-              }}
-              style={{
-                position: 'absolute',
-                left: `${tag.x}%`,
-                top:  `${tag.y}%`,
-                rotate: `${tag.rotate}deg`,
-                transformOrigin: 'center center',
-              }}
-              className="bg-[#FA88CB] text-black font-heading font-black text-[9px] sm:text-[10px]
-                         uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md pointer-events-none
-                         whitespace-nowrap"
-            >
-              {tag.label}
-            </motion.span>
-          ))}
-        </AnimatePresence>
+            {isHovered && tags.map((tag, i) => (
+              <motion.div
+                key={tag.label}
+                initial={{ opacity: 0, scale: 0.6, x: -10 }}
+                animate={{ opacity: 1, scale: 1, x: 0 }}
+                exit={{ opacity: 0, scale: 0.6, x: -10 }}
+                transition={{ duration: 0.3, delay: i * 0.08 }}
+                style={{
+                  position: 'absolute',
+                  left: `${tag.x}%`,
+                  top: `${tag.y}%`,
+                  pointerEvents: 'none',
+                }}
+                className="flex items-center gap-1.5 whitespace-nowrap z-20"
+              >
+                {/* SVG Pointer without background */}
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" className="drop-shadow-md overflow-visible">
+                  <circle cx="4" cy="6" r="3.5" fill="#E3000F" stroke="#ffffff" strokeWidth="1.5" />
+                  <path d="M8 6 L26 6" stroke="#ffffff" strokeWidth="2" strokeDasharray="3 2" />
+                </svg>
+                <span 
+                  className="font-heading font-black text-[10px] sm:text-[12px] uppercase tracking-widest text-white"
+                  style={{ textShadow: '0px 2px 8px rgba(0,0,0,0.9), 0px 0px 4px rgba(0,0,0,0.8), 0px 0px 2px rgba(0,0,0,1)' }}
+                >
+                  {tag.label}
+                </span>
+              </motion.div>
+            ))}
+          </AnimatePresence>
       </div>
 
       {/* ── PRODUCT INFO ── */}
-      <div className="px-6 pb-7 pt-5 flex flex-col gap-3.5">
+      <div className="relative z-10 px-[16px] pb-[20px] pt-6 flex flex-col gap-4">
         <div>
           <h3
             onClick={onQuickView}
-            className="font-heading font-black text-[11px] uppercase tracking-tight text-black
-                       hover:text-[#0F6270] transition-colors cursor-pointer leading-snug"
+            className="font-heading font-black text-[15px] uppercase tracking-tight text-black
+                       hover:text-primary transition-colors cursor-pointer leading-snug"
           >
             {product.name}
           </h3>
-          <p className="text-[11px] text-gray-400 font-medium mt-0.5">
+          <p className="text-[13px] text-gray-500 font-medium mt-1">
             Box of 6&nbsp;•&nbsp;4oz
           </p>
         </div>
 
-        {/* Price + qty controls */}
         <div className="flex items-center justify-between">
-          <span className="font-heading font-black text-sm text-black">
+          <span className="font-heading font-black text-[16px] text-black">
             ₹{product.price}
           </span>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2.5">
             <button
               onClick={onDecrease}
               aria-label="Decrease quantity"
-              className="w-7 h-7 rounded-full bg-[#0F6270] text-white
-                         flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-8 h-8 rounded-full bg-primary text-white
+                         flex items-center justify-center hover:bg-primary-dark transition-colors"
             >
-              <Minus className="w-3 h-3" strokeWidth={3} />
+              <Minus className="w-3.5 h-3.5" strokeWidth={3} />
             </button>
-            <span className="font-sans font-bold text-sm w-4 text-center text-black select-none">
+            <span className="font-sans font-bold text-base w-5 text-center text-black select-none">
               {qty}
             </span>
             <button
               onClick={onIncrease}
               aria-label="Increase quantity"
-              className="w-7 h-7 rounded-full bg-[#FA88CB] text-black
-                         flex items-center justify-center hover:opacity-80 transition-opacity"
+              className="w-8 h-8 rounded-full bg-accent text-black
+                         flex items-center justify-center hover:bg-accent-dark transition-colors"
             >
-              <Plus className="w-3 h-3" strokeWidth={3} />
+              <Plus className="w-3.5 h-3.5" strokeWidth={3} />
             </button>
           </div>
         </div>
 
-        {/* ADD TO CART */}
         <motion.button
           whileTap={{ scale: 0.96 }}
           onClick={onAddToCart}
-          className="w-full bg-[#FA88CB] hover:bg-[#f775c0] text-black font-heading font-black
-                     text-[11px] uppercase tracking-[0.14em] py-3.5 rounded-full transition-colors"
+          className="w-full bg-accent hover:bg-accent-dark text-black font-heading font-black
+                     text-[13px] uppercase tracking-[0.16em] py-3.5 rounded-full transition-colors"
         >
           ADD TO CART
         </motion.button>
@@ -367,9 +333,7 @@ export const BestsellersSection: React.FC<BestsellersSectionProps> = ({
       id="bestsellers"
       className="relative bg-[#F9F8F3] overflow-hidden py-24"
     >
-      {/* ═══════════════════════════════════════
-          CSS for marquee + stroke text + card
-      ════════════════════════════════════════ */}
+      {/* CSS for marquee + stroke text */}
       <style>{`
         @keyframes bmc-l {
           from { transform: translateX(0); }
@@ -379,75 +343,72 @@ export const BestsellersSection: React.FC<BestsellersSectionProps> = ({
           from { transform: translateX(-50%); }
           to   { transform: translateX(0); }
         }
-        /* SLOWER SPEED: 80s */
         .bmc-left  { animation: bmc-l 80s linear infinite; }
         .bmc-right { animation: bmc-r 80s linear infinite; }
 
         .bmc-stroke {
-          -webkit-text-stroke: 2.5px #0F6270;
+          -webkit-text-stroke: 2px #E3000F;
           color: transparent;
         }
       `}</style>
 
-      {/* ══════════════════════════════════════════════════
-          BACKGROUND — ALTERNATING LEFT / RIGHT MARQUEE ROWS
-          Row 0 → left   Row 1 → right   Row 2 → left …
-      ═════════════════════════════════════════════════════ */}
-      <div
-        aria-hidden
-        className="absolute inset-0 z-0 pointer-events-none overflow-hidden
-                   flex flex-col justify-around opacity-[0.17]"
-        style={{ transform: 'rotate(-12deg) scale(1.55)' }}
-      >
-        {[false, true, false, true, false, true].map((rev, i) => (
-          <MarqueeRow key={i} reverse={rev} />
-        ))}
-      </div>
+      
 
       {/* ════════════════════════════════════════════
-          CONTENT — 100px padding left & right (hard px)
+          CONTENT — z-[2] so cards sit IN FRONT of watermark
       ════════════════════════════════════════════ */}
-      <div className="relative z-10 px-[24px] sm:px-[50px] lg:px-[100px]">
+      <div className="relative z-[2] px-[16px] sm:px-[40px] lg:px-[100px]">
 
         {/* ── TOP TEXT ROW ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
-          {/* Left: headline + SVG doodle */}
+        <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
           <div className="lg:col-span-7 space-y-6">
             <h2
               className="font-heading font-black text-[2rem] sm:text-[2.6rem] lg:text-[2.8rem]
-                         text-[#0F6270] uppercase leading-[0.95] tracking-tight max-w-2xl"
+                         text-black uppercase leading-[0.95] tracking-tight max-w-2xl"
             >
               GOOD FOOD SHOULD BOTH COMFORT AND NOURISH THE SOUL.
             </h2>
-            {/* Hand-drawn cake slice — rendered as pure SVG component */}
             <CakeSliceSVG />
           </div>
 
-          {/* Right: description */}
-          <div className="lg:col-span-5 text-[#0F6270] text-xs sm:text-sm font-medium leading-relaxed lg:pt-1">
-            We are centrally located in Sector 17, New Delhi. Stop by for a
+          <div className="lg:col-span-5 text-black text-[14px] sm:text-[16px] font-medium leading-relaxed lg:pt-1">
+            We are located in Mullanpur Dakha, Ludhiana, Punjab. Stop by for a
             coffee, catch up on work, or grab some of our delicious goodies to
             go. With cookies and cakes available for online order, there's
             something for everyone, and every occasion.
           </div>
         </div>
 
-        {/* ── PRODUCT CARDS GRID ── */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {bestsellers.map((product, idx) => (
-            <BestsellersCard
-              key={product.id}
-              product={product}
-              qty={getQty(product.id)}
-              onIncrease={() => adjust(product.id, +1)}
-              onDecrease={() => adjust(product.id, -1)}
-              onAddToCart={() =>
-                addToCart(product, product.weightOptions[0], getQty(product.id))
-              }
-              onQuickView={() => onQuickView(product)}
-              index={idx}
-            />
-          ))}
+        {/* ── PRODUCT CARDS GRID + WATERMARK WRAPPER ── */}
+        <div className="relative py-4">
+          {/* WATERMARK — exactly 4 rows, full screen width horizontally, unclipped vertically to prevent sharp cuts */}
+          <div
+            aria-hidden
+            className="absolute inset-y-0 left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen z-[0] pointer-events-none flex flex-col justify-center items-center opacity-100"
+          >
+            <div className="w-[150%] flex flex-col justify-center" style={{ transform: 'rotate(-12deg) scale(1.4)', gap: '1rem' }}>
+              {[false, true, false, true].map((rev, i) => (
+                <MarqueeRow key={i} reverse={rev} />
+              ))}
+            </div>
+          </div>
+
+          <div className="relative z-[1] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-[62px] lg:gap-[92px] items-start">
+            {bestsellers.map((product, idx) => (
+              <BestsellersCard
+                key={product.id}
+                product={product}
+                qty={getQty(product.id)}
+                onIncrease={() => adjust(product.id, +1)}
+                onDecrease={() => adjust(product.id, -1)}
+                onAddToCart={() =>
+                  addToCart(product, product.weightOptions[0], getQty(product.id))
+                }
+                onQuickView={() => onQuickView(product)}
+                index={idx}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -12,7 +12,7 @@ export interface Product {
   isBestseller: boolean;
   badge?: string;
   image: string;
-  hoverImage: string;
+    hoverImage: string;
   weightOptions: string[];
 }
 
@@ -30,8 +30,8 @@ export const PRODUCTS: Product[] = [
     isEggless: true,
     isBestseller: true,
     badge: 'Bestseller',
-    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80',
+    image: '/cookies.jpg',
+    hoverImage: '/cookies.jpg',
     weightOptions: ['250g Box', '500g Box', '1kg Tin Box'],
   },
   {
@@ -46,8 +46,8 @@ export const PRODUCTS: Product[] = [
     isEggless: true,
     isBestseller: true,
     badge: '100% Eggless',
-    image: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80',
+    image: '/nankhatai.jpg',
+    hoverImage: '/nankhatai.jpg',
     weightOptions: ['300g Box', '600g Gift Box'],
   },
   {
@@ -63,8 +63,8 @@ export const PRODUCTS: Product[] = [
     isEggless: true,
     isBestseller: true,
     badge: 'Signature Fusion',
-    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1535141192574-5d4897c13136?auto=format&fit=crop&w=800&q=80',
+    image: '/cake.jpg',
+    hoverImage: '/cake.jpg',
     weightOptions: ['500g', '1kg', '2kg Party Special'],
   },
   {
@@ -80,7 +80,7 @@ export const PRODUCTS: Product[] = [
     isBestseller: false,
     badge: 'Decadent Choice',
     image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&q=80',
     weightOptions: ['500g', '1kg'],
   },
   {
@@ -96,7 +96,7 @@ export const PRODUCTS: Product[] = [
     isBestseller: true,
     badge: 'Fresh Daily 7 AM',
     image: 'https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=800&q=80',
     weightOptions: ['1 Loaf (500g)', 'Sliced Loaf'],
   },
   {
@@ -112,7 +112,7 @@ export const PRODUCTS: Product[] = [
     isBestseller: false,
     badge: 'Crispy Snack',
     image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1621996346565-e3d5d6281286?auto=format&fit=crop&w=800&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=800&q=80',
     weightOptions: ['200g Pouch', '400g Value Pack'],
   },
   {
@@ -128,7 +128,7 @@ export const PRODUCTS: Product[] = [
     isBestseller: true,
     badge: 'Oven Warm',
     image: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=800&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80',
     weightOptions: ['Single Croissant', 'Box of 4', 'Box of 8'],
   },
   {
@@ -144,7 +144,7 @@ export const PRODUCTS: Product[] = [
     isBestseller: false,
     badge: 'Chef Special',
     image: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1519869325930-281384150729?auto=format&fit=crop&w=800&q=80',
     weightOptions: ['Individual Portion', 'Pack of 2'],
   },
   {
@@ -159,8 +159,8 @@ export const PRODUCTS: Product[] = [
     isEggless: true,
     isBestseller: true,
     badge: 'Tea Time Classic',
-    image: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=800&q=80',
-    hoverImage: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1596223574883-8cfb62e49cdd?auto=format&fit=crop&w=800&q=80',
+    hoverImage: 'https://images.unsplash.com/photo-1596223574883-8cfb62e49cdd?auto=format&fit=crop&w=800&q=80',
     weightOptions: ['250g Pack', '500g Pack'],
   }
 ];

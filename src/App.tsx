@@ -31,7 +31,7 @@ export const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F6F0] flex flex-col font-sans relative">
+    <div className="min-h-screen bg-[#F8F6F0] flex flex-col font-sans relative overflow-x-hidden">
       {/* Header Bar */}
       <Header
         onOpenMobileMenu={() => setIsMobileMenuOpen(true)}
@@ -79,31 +79,7 @@ export const AppContent: React.FC = () => {
           onExploreAll={() => handleNavigate('catalog')}
         />
 
-        {/* 3. Top Marquee Brand Banner */}
-        <MarqueeTicker />
-
-        {/* 4. Product Discovery Catalog */}
-        <ProductCatalogSection
-          onQuickView={(p) => setSelectedProduct(p)}
-        />
-
-        {/* 5. Storytelling & Craft */}
-        <StorySection />
-
-        {/* 6. Reverse Marquee Banner */}
-        <MarqueeTicker reverse bg="bg-bakery-chocolate" textColor="text-bakery-cream" />
-
-        {/* 7. Special Promotional Offer */}
-        <SpecialOfferSection
-          onClaimOffer={() => handleNavigate('catalog')}
-        />
-
-        {/* 8. Visit Bakery & Location */}
-        <VisitSection />
       </main>
-
-      {/* 9. Rich Footer */}
-      <FooterSection onNavigate={handleNavigate} />
     </div>
   );
 };

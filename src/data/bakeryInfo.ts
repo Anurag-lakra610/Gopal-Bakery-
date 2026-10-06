@@ -5,7 +5,7 @@ export const BAKERY_INFO = {
   phone: "+91 98765 43210",
   whatsapp: "+91 98765 43210",
   email: "hello@gopalbakery.com",
-  address: "124 Bakery Lane, Heritage Market, Sector 17, New Delhi, India",
+  address: "Mullanpur Dakha, Ludhiana, Punjab, India",
   hours: {
     weekdays: "7:00 AM – 9:30 PM",
     weekends: "7:00 AM – 10:00 PM",
@@ -25,7 +25,7 @@ export const BAKERY_INFO = {
     {
       id: "1",
       name: "Priya Sharma",
-      city: "New Delhi",
+      city: "Ludhiana",
       quote: "The Shrewsbury butter cookies remind me of my childhood! So crumbly, buttery, and perfectly sweet. Best bakery in the city!",
       rating: 5,
       favoriteItem: "Shrewsbury Butter Cookies"
@@ -33,7 +33,7 @@ export const BAKERY_INFO = {
     {
       id: "2",
       name: "Vikramaditya Roy",
-      city: "Gurugram",
+      city: "Jalandhar",
       quote: "Ordered the Kesar Rasmalai Fusion cake for my anniversary. Everyone was blown away by how soft and authentic it tasted!",
       rating: 5,
       favoriteItem: "Royal Kesar Rasmalai Cake"
@@ -41,7 +41,7 @@ export const BAKERY_INFO = {
     {
       id: "3",
       name: "Ananya Mehta",
-      city: "Noida",
+      city: "Chandigarh",
       quote: "Their rustic sourdough loaf is unmatched. Perfectly crusty outside and soft inside. We get two loaves every single week!",
       rating: 5,
       favoriteItem: "Country Style Sourdough"

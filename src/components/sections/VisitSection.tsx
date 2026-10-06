@@ -16,7 +16,7 @@ export const VisitSection: React.FC = () => {
             Visit Us or Order Fresh
           </h2>
           <p className="text-sm sm:text-base text-bakery-chocolate-light leading-relaxed">
-            Come say hello at our flagship bakery in Sector 17, or place an express WhatsApp order for home delivery.
+            Come say hello at our bakery in Mullanpur Dakha, Ludhiana, or place an express WhatsApp order for home delivery.
           </p>
         </div>
 

@@ -26,8 +26,8 @@
 @layer base {
   html {
     font-family: 'balto', sans-serif;
-    color: #2B1E1A;
-    background-color: #FAF6F0;
+    color: #1A1A1A;
+    background-color: #FFFFFF;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -42,21 +42,21 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #FAF6F0;
+  background: #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #C85A32;
+  background: #E3000F;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #A64522;
+  background: #B3000C;
 }
 
 /* Glassmorphism Header */
 .glass-header {
-  background: rgba(250, 246, 240, 0.85);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
 }
